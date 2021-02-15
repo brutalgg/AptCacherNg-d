@@ -1,0 +1,3 @@
+#!/usr/bin/with-contenv sh
+
+exec s6-setuidgid abc apt-cacher-ng -c /config/conf ForeGround=1

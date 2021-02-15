@@ -1,0 +1,12 @@
+#!/usr/bin/with-contenv sh
+
+# checking for existing config
+echo "[+] Checking for existing configuration"
+if [ ! -d "/config/conf" ]; then
+    mkdir /config/conf
+    cp /etc/apt-cacher-ng/* /config/conf/
+    cp /defaults/acng.conf /config/conf/
+    chown -R abc:abc /config/conf
+fi
+
+chown abc:abc /data
